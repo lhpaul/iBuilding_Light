@@ -1,0 +1,11 @@
+{ "name" : "ibuilding_device"
+, "version" : "0.5.1"
+, "dependencies": {
+        "mocha": "*",
+        "request": "*",
+        "util": "*",
+        "url": "*",
+        "fs": "*",
+        "nconf": "*"
+ }
+ ,"scripts":{ "test": "node_modules/mocha/bin/mocha" } }
