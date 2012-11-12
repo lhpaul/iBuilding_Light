@@ -1,10 +1,13 @@
 { "name" : "ibuilding_device"
 , "version" : "0.5.1"
 , "dependencies": {
-        "vows": "*",
+        "mocha":"*",
         "request": "*",
         "util": "*",
         "url": "*",
         "fs": "*"
  }
- ,"scripts":{ "test": "node_modules/vows/bin/vows" } }
+ ,"scripts":{ 
+ 	"test": "node_modules/mocha/bin/mocha"
+ 	} 
+ }

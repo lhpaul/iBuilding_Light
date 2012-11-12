@@ -1,20 +1,13 @@
-var vows = require('vows'),
-    assert = require('assert');
+var request = require('request'),
+      assert = require('assert');
 
-var api = {
-    get: function (path) {
-        return function () {
-            client.get(path, this.callback);
-        };
-    }
-};
-
-vows.describe('Accesing api').addBatch({
-  'GET /': { topic: function () {
-    client.get('/status', this.callback);
-  },
-  'should respond with a 200 OK': function (e, res) {
-    assert.equal (res.status, 200);
-  }
-}
-}).export(module);
+      describe('Dispositivo de Luz', function(){
+        describe('GET /status', function(){
+          it("should respond with status 200", function(done){
+            request('http://127.0.0.1:3000/status', function(err,resp,body){
+              assert.equal(resp.statusCode, 200);
+              done(); 
+            }); 
+        }); 
+    });
+});
