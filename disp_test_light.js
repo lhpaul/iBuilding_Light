@@ -87,7 +87,7 @@ http.createServer(function (req, res) {
      * Display the 404 page for content that can't be found
      **/
     function display_404(url, req, res) {
-	res.end('error')
+	res.end('Error. This resource does not exist.')
     }
 }).listen(port,"0.0.0.0");
 sys.puts(process.env.NODE_ENV);
